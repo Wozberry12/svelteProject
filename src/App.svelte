@@ -38,6 +38,7 @@
 
 <main class = "main">
     <Header />
+    <div class="clear"><div>
     <div class= "accordContainer">
         <Accordion isOpen = {navItems[0].open}>
             <span slot="head"> {navItems[0].name}
@@ -48,6 +49,8 @@
                 </p>
             </div>
         </Accordion>
+    </div>
+    <div class= "accordContainer">
         <Accordion isOpen = {navItems[1].open}>
             <span slot="head">  {navItems[1].name}
             </span>
@@ -57,6 +60,8 @@
                 </p>
             </div>
         </Accordion>
+    </div>
+    <div class= "accordContainer">
         <Accordion isOpen = {navItems[2].open}>
             <span slot="head">  {navItems[2].name}
             </span>
@@ -66,7 +71,8 @@
                 </p>
             </div>
         </Accordion>
-        
+    </div>
+    <div class= "accordContainer">
         <Accordion isOpen = {navItems[3].open}>
             <span slot="head"> {navItems[3].name}
             </span>
@@ -76,12 +82,14 @@
                 </p>
             </div>
         </Accordion>
-        <hr>
-</div>
+    </div>
+    <hr>
 </main>
 
 <style>
-	
+	div.clear{
+        clear:both;
+    }
     hr{
         width:100%;
     }
@@ -90,7 +98,7 @@
        min-height:100%;
    }
    div.accordContainer{
-       object-fit: fill;
+       display:static;
    }
 </style>
 

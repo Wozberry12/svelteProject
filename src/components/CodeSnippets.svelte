@@ -6,6 +6,7 @@
     const styleTag = "< style >Insert all CSS here< /style >\n";
     
     const importComponent = "<ComponentName />";
+    const setMeOutside = "<ComponentName setMeOutside = {'This value is given to the component'}/>"
 </script>
 
     <h1>Examples of Code</h1>
@@ -55,8 +56,33 @@
                 <div class="codeSnippet">
                     {importComponent}
                 </div>
-                This will run ALL the code from the imported component. This mean you have full control
-                of where the JavaScript, HTML, and CSS will be executed.
+                This will run <strong>ALL</strong> the code from the imported component. This mean you have full control
+                of where the JavaScript, HTML, and CSS will be executed in a component based on where it is injected.
+                But what if you need to pass in a value into a component from an external module? This is where
+                Svelte Props come in!
+        </li>
+        <li>
+            <h3>
+                Props in Svelte
+            </h3>
+            <p>
+                In order to pass a value into an external component, you must
+                declare the variable with a name identical to the variable you wish to utilize
+                within the component. Next, within the component, you are accessing
+                you must add the <code>export</code> keyword in front of the variable:
+                <div class= "codeSnippet">
+                    export let setMeOutside;
+                </div>
+                <p>
+                    The <code>export</code> keyword lets the compiler know this variable can be set
+                    outside of this component. Now return to the application using the component.
+                    Declare a variable in the script section with the same name, then pass it into the 
+                    component like so:
+                    <div class= "codeSnippet">
+                        let setMeOutside;
+                        <br><br>
+                        {setMeOutside}
+                </div>
         </li>
     </ul>
 
@@ -64,6 +90,9 @@
     h1{
         text-align:center;
         text-decoration: underline;   
+    }
+    h3{
+        text-decoration: underline;
     }
     ul{
 
