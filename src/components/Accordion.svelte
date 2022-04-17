@@ -1,12 +1,10 @@
 <script>
-    import NavigationBar from './NavigationBar.svelte';
 
     export let isOpen = false;
     //Smoothly opens a tab
     import { slide } from 'svelte/transition';
     //Create clickHandler
 
-    let navItems = NavigationBar.navItems;
     const clickHandler = () =>
         isOpen = !isOpen
 </script>
@@ -19,9 +17,13 @@
                 </slot>
             </div>
         </div>    
-    <button on:click = {clickHandler}>
-        Expand
-    </button>
+    <button on:click|self = {clickHandler}>
+            {#if isOpen == false}
+            Expand
+            {:else if isOpen == true}
+            Collapse
+            {/if}
+    
     {#if isOpen}
     <div class = "details" transition:slide>
         <slot name="details"></slot>
@@ -36,7 +38,7 @@
     }
     div.header{
         width:100%;
-        
+        position:static;
     }
     div.header .text{
         flex: 1;
@@ -52,7 +54,6 @@
         background-color: rgba(69, 157, 183, 0.2);
         padding:1rem;
         text-align:left;
-        flex: 1 1 auto;
     }
     
 

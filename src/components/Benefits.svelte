@@ -31,20 +31,15 @@
                 the example of a user 
                 <a href= "https://svelte.dev/blog/write-less-code" target="_blank" rel="noopener noreferrer"> adding two numbers </a>
                 in a web application.
-                <div class="col1">
-                Below is how svelte does it:
-                <br>
-                <Accordion>
-                    <div class = "innerAccord" slot ="details">
-                            <img id ="lessCode" src={lessSvelteCode} alt="Much less code."/>
-                    </div>
-                </Accordion>
-            </div>
-                <Accordion>
-                    <div slot="details">
-                        <img id="moreCode" src={reactMoreCode} alt="Much more code."/>
-                    </div>
-                </Accordion>
+                    <p>
+                        Below is how we program it in Svelte:
+                        <br>
+                        <img id ="lessCode" src={lessSvelteCode} alt="Much less code."/>
+                    </p>
+                <p>
+                    Below is the exact same program in React:
+                </p>
+                <img id="moreCode" src={reactMoreCode} alt="Much more code."/>
         </li>
     </ul>
 
@@ -70,11 +65,7 @@
         width:400px;
         height:300px;
     }
-    div.innerAccord{
-       border:black 5px;
-       margin:0px;
-        
-    }
+
    /* 
     div.codeSnippet{
         background-color: rgba(164, 157, 183, 0.8);

@@ -7,14 +7,16 @@
     <h1>
         Svelte: Simplifying Reactive Development
     </h1>
+    <br>
+    <p>
+        By Will Oswald, Marco Kosasih, and Ben Kamide
+    </p>
     </div>
     <div class= "colRight">
         <img src = {svelteLogo} alt="Svelte Logo"/>
     </div>
     <div class = "clear"></div>
-    <p>
-        By Will Oswald, Marco Kosasih, and Ben Kamide
-    </p>
+
 
     
 </header>
@@ -51,6 +53,7 @@
     p{
         color: orangered;
         text-transform: capitalize;
+        text-align: center;
     }
     img{
         width: 100%;
