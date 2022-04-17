@@ -2,25 +2,41 @@
 <script>
     import Accordion from "./components/Accordion.svelte";
     import NavigationBar from "./components/NavigationBar.svelte";
+    //Detail Files in Tutorial
     import Installation from "./components/Installation.svelte";
+    import History from "./components/History.svelte";
+    let isOpen = false;
+
+    let navItems = 
+    [
+        {
+            id: '1',
+            name: 'Software Setup',
+            open: isOpen
+        },
+        {
+            id: '2',
+            name: 'History of Svelte',
+            open: isOpen
+        },
+        {
+            id: '3',
+            name: 'Highlights of Svelte',
+            open: isOpen
+        },
+        {
+            id: '4',
+            name: 'Code Snippets',
+            open: isOpen
+        }
+    ];
+    
 </script>
 
-<style>
-	
-</style>
 
 <main class = "main">
-    <Accordion>
-        <span slot="head"> History of Svelte
-        </span>
-        <div slot ="details">
-            <p>
-                Details Are here
-            </p>
-        </div>
-    </Accordion>
-    <Accordion>
-        <span slot="head"> Software Setup
+    <Accordion isOpen = {navItems[0].open}>
+        <span slot="head"> {navItems[0].name}
         </span>
         <div slot ="details">
             <p>
@@ -28,8 +44,17 @@
             </p>
         </div>
     </Accordion>
-    <Accordion>
-        <span slot="head"> What Makes Svelte Different
+    <Accordion isOpen = {navItems[1].open}>
+        <span slot="head">  {navItems[1].name}
+        </span>
+        <div slot ="details">
+            <p>
+                <History />
+            </p>
+        </div>
+    </Accordion>
+    <Accordion isOpen = {navItems[2].open}>
+        <span slot="head">  {navItems[2].name}
         </span>
         <div slot ="details">
             <p>
@@ -37,8 +62,9 @@
             </p>
         </div>
     </Accordion>
-    <Accordion>
-        <span slot="head"> Code Examples
+    
+    <Accordion isOpen = {navItems[3].open}>
+        <span slot="head"> {navItems[3].name}
         </span>
         <div slot ="details">
             <p>
@@ -48,3 +74,11 @@
     </Accordion>
     <hr>
 </main>
+
+<style>
+	
+    hr{
+        width:100%;
+    }
+</style>
+

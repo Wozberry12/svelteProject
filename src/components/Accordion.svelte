@@ -11,8 +11,25 @@
         isOpen = !isOpen
 </script>
 
+
+<div class ="accordion">
+        <div class="header">
+            <div class = "text">
+                <slot name = "head">
+                </slot>
+            </div>
+        </div>    
+    <button on:click = {clickHandler}>
+        Expand
+    </button>
+    {#if isOpen}
+    <div class = "details" transition:slide>
+        <slot name="details"></slot>
+    </div>
+    {/if}
+    </div>
 <style>
-   
+
     div.accordion{
         float:left;
         text-align: center;
@@ -31,29 +48,11 @@
         height: 100%    
     }
     div.details{
-        background-color:grey;
+        background-color: rgba(69, 157, 183, 0.4);
         padding:1rem;
+        text-align:left;
     }
     
 
     
 </style>
-
-
-<div class ="accordion">
-        <div class="header">
-            <div class = "text">
-                <slot name = "head">
-                </slot>
-            </div>
-        </div>    
-    <button on:click = {clickHandler}>
-        Expand
-    </button>
-    {#if isOpen}
-    <div class = "details" transition:slide>
-        <slot name="details"></slot>
-    </div>
-    {/if}
-    </div>
-
