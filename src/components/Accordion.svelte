@@ -40,8 +40,7 @@
 </style>
 
 
-
-    <div class ="accordion">
+<div class ="accordion">
         <div class="header">
             <div class = "text">
                 <slot name = "head">
