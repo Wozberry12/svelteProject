@@ -14,6 +14,7 @@
                 does not always mean easy to learn, enthusiasm in open-source languages
                 means more updates and available components as Svelte continues to grow in popularity. 
             </p>
+            <br>
         </li>
         <li>
             <p>
@@ -34,9 +35,9 @@
         <li>
             <p>
                 What Marco, Ben, and I found most exciting about Svelte is how Svelte is not only new and fresh,
-                but <strong>relevant</strong> Richard Harris' creationhas been adopted by Facebook, Spotify, Apple, and 
+                but <strong>relevant</strong> Richard Harris' creation has been adopted by Facebook, Spotify, Apple, and 
                 The New York Times. Learning this framework can be critical for anyone looking to
-                break through as front-end web developer.
+                break through  in the industry as a front-end web developer.
             </p>
         </li>
     </ul>

@@ -1,7 +1,7 @@
 <script>
     import NavigationBar from './NavigationBar.svelte';
 
-    let isOpen = false;
+    export let isOpen = false;
     //Smoothly opens a tab
     import { slide } from 'svelte/transition';
     //Create clickHandler
@@ -36,6 +36,7 @@
     }
     div.header{
         width:100%;
+        
     }
     div.header .text{
         flex: 1;
@@ -48,9 +49,10 @@
         height: 100%    
     }
     div.details{
-        background-color: rgba(69, 157, 183, 0.4);
+        background-color: rgba(69, 157, 183, 0.2);
         padding:1rem;
         text-align:left;
+        flex: 1 1 auto;
     }
     
 

@@ -5,6 +5,8 @@
     //Detail Files in Tutorial
     import Installation from "./components/Installation.svelte";
     import History from "./components/History.svelte";
+    import Benefits from "./components/Benefits.svelte";
+    import Header from "./components/Header.svelte";
     let isOpen = false;
 
     let navItems = 
@@ -35,6 +37,7 @@
 
 
 <main class = "main">
+    <Header />
     <Accordion isOpen = {navItems[0].open}>
         <span slot="head"> {navItems[0].name}
         </span>
@@ -58,7 +61,7 @@
         </span>
         <div slot ="details">
             <p>
-                Details Are here
+                <Benefits/>
             </p>
         </div>
     </Accordion>
@@ -80,5 +83,6 @@
     hr{
         width:100%;
     }
+   
 </style>
 
