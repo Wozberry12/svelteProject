@@ -9,7 +9,7 @@
     </h1>
     <br>
     <p>
-        Click on any of the below buttons for a quick explanation
+        Start by clicking on any of the below buttons for a quick explanation
         into how to download Svelte, a brief history, and what makes
         Svelte so beloved by developers.
     </p>
@@ -18,9 +18,6 @@
         <img src = {svelteLogo} alt="Svelte Logo"/>
     </div>
     <div class = "clear"></div>
-
-
-    
 </header>
 
 <style>
@@ -54,7 +51,6 @@
     }
     p{
         position: relative;
-        
         color: orangered;
         text-align: center;
     }

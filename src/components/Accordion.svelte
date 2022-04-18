@@ -28,22 +28,24 @@
     </div>
 <style>
     button.btnAccordion{
-		width: 80%;
+		width: 100%;
 		padding:20px;
 		display: inline-block;
         font-family: 'Times New Roman', Times, serif;
         font-size: larger;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #9795b1;
+		background-color: #a39191;
         position: relative;
     }
     div.accordion{
         float:left;
-        text-align: center;
+        align-items: flex-start;
+        width:80%;
+        padding: 2px;
     }
     div.details{
-        background-color: rgba(69, 157, 183, 0.2);
+        background-color: rgba(185, 185, 164, 0.2);
         padding:1rem;
     }
 </style>
