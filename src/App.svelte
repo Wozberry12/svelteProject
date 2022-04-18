@@ -8,6 +8,7 @@
     import Header from "./components/Header.svelte";
     import CodeSnippets from "./components/CodeSnippets.svelte";
     import Footer from "./components/Footer.svelte";
+    import Summary from "./components/Summary.svelte";
     let isOpen = false;
 
     let navItems = 
@@ -30,6 +31,11 @@
         {
             id: '4',
             name: 'Code Snippets',
+            open: isOpen
+        },
+        {
+            id:'5',
+            name:'Moving to Our Web Application',
             open: isOpen
         }
     ];
@@ -77,6 +83,17 @@
                 </p>
             </div>
         </Accordion>
+
+        <Accordion isOpen = {navItems[4].open}>
+            <span slot="head"> {navItems[4].name}
+            </span>
+            <div slot ="details">
+                <p>
+                    <Summary/>
+                </p>
+            </div>
+        </Accordion>
+    
     </div>
     <hr>
 <Footer /> 

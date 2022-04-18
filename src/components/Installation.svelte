@@ -67,7 +67,7 @@
         text-decoration: underline;   
     }
     ul{
-
+        text-align:left;
         list-style: decimal;
         padding-left: 5px;
         font-size:16px;
