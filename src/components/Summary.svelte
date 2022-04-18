@@ -36,9 +36,7 @@
         padding-left: 5px;
         font-size:16px;
     }
-    a,a:visited{
-        color: crimson;
-    }
+   
 
     div.codeSnippet{
         background-color: rgba(164, 157, 183, 0.8);
