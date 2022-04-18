@@ -7,6 +7,7 @@
     import Benefits from "./components/Benefits.svelte";
     import Header from "./components/Header.svelte";
     import CodeSnippets from "./components/CodeSnippets.svelte";
+    import Footer from "./components/Footer.svelte";
     let isOpen = false;
 
     let navItems = 
@@ -49,8 +50,6 @@
                 </p>
             </div>
         </Accordion>
-    </div>
-    <div class= "accordContainer">
         <Accordion isOpen = {navItems[1].open}>
             <span slot="head">  {navItems[1].name}
             </span>
@@ -60,8 +59,6 @@
                 </p>
             </div>
         </Accordion>
-    </div>
-    <div class= "accordContainer">
         <Accordion isOpen = {navItems[2].open}>
             <span slot="head">  {navItems[2].name}
             </span>
@@ -71,8 +68,6 @@
                 </p>
             </div>
         </Accordion>
-    </div>
-    <div class= "accordContainer">
         <Accordion isOpen = {navItems[3].open}>
             <span slot="head"> {navItems[3].name}
             </span>
@@ -84,6 +79,7 @@
         </Accordion>
     </div>
     <hr>
+<Footer /> 
 </main>
 
 <style>
@@ -95,10 +91,15 @@
     }
    main{
        background-color: #202142;
-       min-height:100%;
-   }
+        height: 100%;
+    }
    div.accordContainer{
-       display:static;
+       position:relative;
+       left: 60%;
+       top:50%;
+       padding:10px;
+       transform: translate(-50%,-50%);
+
    }
 </style>
 

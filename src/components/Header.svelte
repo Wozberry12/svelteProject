@@ -9,7 +9,9 @@
     </h1>
     <br>
     <p>
-        By Will Oswald, Marco Kosasih, and Ben Kamide
+        Click on any of the below buttons for a quick explanation
+        into how to download Svelte, a brief history, and what makes
+        Svelte so beloved by developers.
     </p>
     </div>
     <div class= "colRight">
@@ -51,8 +53,9 @@
         border: 5px black solid;
     }
     p{
+        position: relative;
+        
         color: orangered;
-        text-transform: capitalize;
         text-align: center;
     }
     img{
